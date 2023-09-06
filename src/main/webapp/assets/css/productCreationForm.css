@@ -1,0 +1,141 @@
+@charset "ISO-8859-1";
+
+/* Add this to your hom.css file */
+
+/* Style the form container */
+form {
+	min-width:100 px;
+	max-width:600px;
+    margin-top: 20px;
+    padding: 20px;
+	
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style labels for form inputs */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+	margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style text input fields */
+input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+	display: flex;
+	flex-direction: column;
+	 margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style the submit button */
+
+
+/* Additional styling for the admin page */
+/* Add more CSS rules for your admin page here */
+
+body, h1, h2, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    height: 100%;
+}
+
+header {
+    background-color: rgba(49, 125, 135, 0.8);
+    color: #fff;
+    padding: 10px 0;
+}
+
+header h1 {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(49, 125, 135, 0.8);
+    color: #fff;
+}
+
+/* Style links on hover */
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Additional styling for specific sections */
+#user-management {
+    background-color: #f9f9f9;
+}
+
+#content-management {
+    background-color: #f9f9f9;
+}
+
+#site-settings {
+    background-color: #f9f9f9;
+}
+#category{
+	min-width:100 px;
+	max-width:600px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px
+	
+}
+
+#btn{
+	
+	background-color: #337ab7;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+h1{
+	
+	text-align: center;
+	padding: 50px;
+	font-size: 40px;
+	
+}

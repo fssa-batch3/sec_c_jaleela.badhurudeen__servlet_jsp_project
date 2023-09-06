@@ -10,10 +10,12 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <link rel="stylesheet" href="/specsee-webapp/assets/css/product.css">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
 </head>
 <body>
+	
+	<!--  
 	<form action="ProductServlet" method="get">
 		<div class="input-group mb-3">
 			<input type="text" class="form-control"
@@ -23,7 +25,7 @@
 			</div>
 		</div>
 	</form>
-
+-->
 	<div class="computer_glasses">
 
 		<%
@@ -41,10 +43,11 @@
 					<h3><%=e.getProductDescription()%><br>
 					</h3>
 					<h3><%=e.getProductCatagory()%><br> <br> <br>
-						<h3><%=e.getProductPrice()%></h3><br> <br> <br>
-						<a href="UpdateProductServlet?id=<%=e.getProductId()%>"><button>Edit</button></a>
-			           <button>Delete</button>
-						
+						<h3><%=e.getProductPrice()%></h3>
+						<br> <br> <br> <a
+							href="UpdateProductServlet?id=<%=e.getProductId()%>">
+							<button>Edit</button>
+						</a> <a href="DeleteProductServlet?id=<%=e.getProductId()%>"><button>Delete</button></a>
 				</div>
 			</a>
 		</div>
