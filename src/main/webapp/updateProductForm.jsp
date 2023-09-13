@@ -67,7 +67,7 @@
 					<option value="metalics">metalics</option>
 					<option value="rectangle">rectangle</option>
 					<option value="pilot">pilot</option>
-				</select> <br> <input type="submit" value="Create" id="btn">
+				</select> <br> <input type="submit" value="Update" id="btn">
 			</form>
 		</section>
 

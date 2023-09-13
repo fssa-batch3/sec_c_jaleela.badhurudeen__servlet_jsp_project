@@ -11,7 +11,20 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="/specsee-webapp/assets/css/product.css">
 
-
+<style>
+.computer_glasses{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+}
+.cg{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 250px;
+}
+</style>
 </head>
 <body>
 	
@@ -26,14 +39,14 @@
 		</div>
 	</form>
 -->
-	<div class="computer_glasses">
+	<div class="computer_glasses" display="flex">
 
 		<%
 		List<Product> products = (List<Product>) request.getAttribute("Productlist");
 
 		for (Product e : products) {
 		%>
-		<div class="cg">
+		<div class="cg" display="flex">
 			<a href="ProductDetailServlet?id=<%=e.getProductId()%>">
 				<div class="product">
 					<img src="<%=e.getProductMainImageUrl()%>" alt="" width="350px"
