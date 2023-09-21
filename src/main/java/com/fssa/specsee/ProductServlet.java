@@ -19,6 +19,8 @@ import com.fssa.specsee.exceptions.ServiceException;
 import com.fssa.specsee.modelobjects.Product;
 import com.fssa.specsee.servicelayer.ProductService;
 
+
+
 /**
  * Servlet implementation class ProductServlet
  */
@@ -49,6 +51,7 @@ public class ProductServlet extends HttpServlet {
 			if (categoryName != null && !categoryName.isEmpty()) {
 				productList = (List<Product>) ProductService
 						.findAllProductByCategory(ProductCategory.valueOf(categoryName));
+				System.out.print(productList);
 			} else {
 				productList = (List<Product>) ProductService.getAllProducts();
 			}

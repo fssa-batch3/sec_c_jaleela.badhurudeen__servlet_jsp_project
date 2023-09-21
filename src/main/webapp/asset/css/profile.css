@@ -1,0 +1,94 @@
+
+     
+body{
+    display: flex;
+    background-image: url(../images/homepage/wave-haikei\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+body .profile_side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 1000px;
+    border-radius: 20px;
+    box-shadow: 1px 5px 10px black;
+    margin-left: 10px;
+    margin-top: 100px; 
+
+    
+}
+form{
+    display: flex;
+}
+body .profile_side img{
+    height: 200px;
+    width: 160px;
+    border-radius: 10px;
+}
+
+.profile_img img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+form input{
+    height: 38px;
+    width: 300px;
+}
+
+label{
+    font-size: 20px;
+}
+form{
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+   
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 5px 10px black;
+    width: 2000px;
+    border-radius: 20px;
+    margin-left: 10%;
+    margin-top: 5%;
+    height: 600px;
+    margin-right: 50px;
+}
+.gender input{
+    width: 20px;
+}
+h1{
+    padding: 30px;
+    font-size: 50px;
+}
+/* .profile_side{
+    width: 1000px;
+} */
+.profile_img{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+}
+button{
+    width: 80px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.btn_prfl{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 300px;
+    padding: 30px;
+}

@@ -15,6 +15,8 @@ import com.fssa.specsee.exceptions.InvalidProductException;
 import com.fssa.specsee.modelobjects.Product;
 import com.fssa.specsee.servicelayer.ProductService;
 
+
+
 /**
  * Servlet implementation class AddProductServlet
  */

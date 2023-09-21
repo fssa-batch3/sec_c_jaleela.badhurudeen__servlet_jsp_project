@@ -47,7 +47,7 @@
         </p>
         <div class="btn">
             <a href="../order/add_to_cart.html"><button type="submit">Add to Cart</button></a>
-            <a href="../order/login.html"><button type="submit">Shop Now</button></a>
+            <a href="<%=request.getContextPath() %>/CheckLoginWhenShop?id=<%=product.getProductId() %>"><button type="submit">Shop Now</button></a>
         </div>
         <div class="btn_one">
             <a href="../../pages/facilities/frame_size.html"><button type="submit">Do You Know About Your Frame Size?</button></a>

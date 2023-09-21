@@ -9,7 +9,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<link rel="stylesheet" href="/specsee-webapp/assets/css/product.css">
+<link rel="stylesheet" href="<%=request.getContextPath() %>/specsee-webapp/assets/css/product.css">
 
 <style>
 .computer_glasses{
@@ -28,22 +28,11 @@
 </head>
 <body>
 	
-	<!--  
-	<form action="ProductServlet" method="get">
-		<div class="input-group mb-3">
-			<input type="text" class="form-control"
-				placeholder="Search by category" name="productCategory">
-			<div class="input-group-append">
-				<button class="btn btn-outline-secondary" type="submit">Search</button>
-			</div>
-		</div>
-	</form>
--->
 	<div class="computer_glasses" display="flex">
 
 		<%
 		List<Product> products = (List<Product>) request.getAttribute("Productlist");
-
+		if(products != null){
 		for (Product e : products) {
 		%>
 		<div class="cg" display="flex">
@@ -66,7 +55,10 @@
 		</div>
 		<%
 		}
+		}else{
 		%>
+		<p>Null</p>
+		<%} %>
 	</div>
 
 </body>
