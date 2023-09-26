@@ -9,31 +9,69 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<link rel="stylesheet" href="<%=request.getContextPath() %>/specsee-webapp/assets/css/product.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/asset/css/computer.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/assets/css/index.css">
 
-<style>
-.computer_glasses{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    text-align: center;
-}
-.cg{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin-top: 250px;
-}
-</style>
+<!-- Notify CSS -->
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/gh/suryaumapathy2812/notify__js/notify.css">
+
+<!-- Notify Js script file -->
+<script
+	src="https://cdn.jsdelivr.net/gh/suryaumapathy2812/notify__js/notify.js">
+	
+</script>
+
+
+
 </head>
 <body>
+
+	<%
+	String success = (String) request.getAttribute("success");
+	if (success != null) {
+	%>
+	<script>
+		let success = "<%=success%>";
+		Notify.success(success);
+	</script>
+	<%
+	}
+	%>
 	
+	<%
+	String error = (String) request.getAttribute("error");
+	if (error != null) {
+	%>
+	<script>
+		let error = "<%=error%>";
+		Notify.error(error);
+	</script>
+	<%
+	}
+	%>
+
+	<header>
+		<h1>Admin Dashboard</h1>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="ProductServlet">Products</a></li>
+				<li><a href="createProductForm.jsp">Add Products</a></li>
+				<li><a href="#">Profile</a></li>
+				<li><a href="#">Logout</a></li>
+			</ul>
+		</nav>
+	</header>
+
 	<div class="computer_glasses" display="flex">
 
 		<%
 		List<Product> products = (List<Product>) request.getAttribute("Productlist");
-		if(products != null){
-		for (Product e : products) {
+		if (products != null) {
+			for (Product e : products) {
 		%>
 		<div class="cg" display="flex">
 			<a href="ProductDetailServlet?id=<%=e.getProductId()%>">
@@ -55,10 +93,12 @@
 		</div>
 		<%
 		}
-		}else{
+		} else {
 		%>
 		<p>Null</p>
-		<%} %>
+		<%
+		}
+		%>
 	</div>
 
 </body>

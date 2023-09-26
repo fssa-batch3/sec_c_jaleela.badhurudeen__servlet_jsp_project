@@ -20,7 +20,6 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response)
 
 	if (session != null) {
 		session.removeAttribute("LoggedInEmail");
-		Logger.info("Existing Session ID:" + session.getId());
 
 		// invalidate removes all the session attributes
 		session.invalidate();

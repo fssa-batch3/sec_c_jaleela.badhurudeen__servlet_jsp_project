@@ -2,3 +2,6 @@
     position: relative;
     left: -50px;
 }
+body{
+overflow: hidden;	
+	}

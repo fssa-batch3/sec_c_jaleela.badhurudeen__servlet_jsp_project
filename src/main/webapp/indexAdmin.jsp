@@ -12,11 +12,11 @@
         <h1>Admin Dashboard</h1>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="<%=request.getContextPath() %>/indexAdmin.jsp">Home</a></li>
                 <li><a href="ProductServlet">Products</a></li>
 			    <li><a href="createProductForm.jsp">Add Products</a></li>
                 <li><a href="deleteProductForm.jsp">Profile</a></li>
-                <li><a href="#">Logout</a></li>
+                <li><a href="LogoutServlet">Logout</a></li>
             </ul>
         </nav>
     </header>

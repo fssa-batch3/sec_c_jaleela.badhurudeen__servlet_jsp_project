@@ -35,12 +35,10 @@ public class ProfileServlet extends HttpServlet {
 	
 		HttpSession httpSession = request.getSession();
 		String emailId = (String) httpSession.getAttribute("loggedInEmail"); 
-		Logger.info(emailId);
 
 		try {
 			User userDetails = new UserService().login(emailId);
 			request.getSession().setAttribute("userDetails", userDetails);
-			
 			RequestDispatcher rd = request.getRequestDispatcher("/profile.jsp");
 			rd.forward(request, response);
 		} catch (ServiceException e) {

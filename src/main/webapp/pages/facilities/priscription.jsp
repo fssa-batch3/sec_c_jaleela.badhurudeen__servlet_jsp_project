@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,12 +15,12 @@
 
 </head>
 <body>
-    <jsp:include page="header.jsp"></jsp:include>
+    <jsp:include page="/header.jsp"></jsp:include>
    <main>
         <div class="frame_head">
-            <a href="../../pages/facilities/frame_size.html"><img src="../../asset/images/styles/face_type.png" alt=""></a>
-            <a href="../../pages/facilities/priscription.html"><img src="../../asset/images/styles/priscription.png" alt=""></a>
-            <a href="../../pages/facilities/frame_size_credit.html"><img src="../../asset/images/styles/credit.png" alt=""></a>
+            <a href="../../pages/facilities/frame_size.jsp"><img src="../../asset/images/styles/face_type.png" alt=""></a>
+            <a href="../../pages/facilities/priscription.jsp"><img src="../../asset/images/styles/priscription.png" alt=""></a>
+            <a href="../../pages/facilities/frame_size_credit.jsp"><img src="../../asset/images/styles/credit.png" alt=""></a>
         </div>
       <div class="banner">
         <img src="../../asset/images/styles/banner_pris.png" alt="">

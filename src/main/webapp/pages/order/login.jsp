@@ -7,27 +7,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../asset/css/login.css">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/asset/css/login.css">
+    
+<!-- Notify CSS -->
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/gh/suryaumapathy2812/notify__js/notify.css">
+
+<!-- Notify Js script file -->
+<script
+	src="https://cdn.jsdelivr.net/gh/suryaumapathy2812/notify__js/notify.js">
+	
+</script>
 </head>
 <body>
     <!--login page-->
+    <%
+	String success = (String) request.getAttribute("success");
+	if (success != null) {
+	%>
+	<script>
+		let success = "<%=success%>";
+		Notify.success(success);
+	</script>
+	<%
+	}
+	%>
+
     <div class="login">
         <div class="glass">
             <div class="arrow">
-               <a href="<%=request.getContextPath() %>/index.jsp" ><img src="../../asset/images/homepage/arrow.png" alt="arrow"></a>
+               <a href="<%=request.getContextPath() %>/index.jsp" ><img src="<%=request.getContextPath() %>/asset/images/homepage/arrow.png" alt="arrow"></a>
             </div>
-            <img src="../../asset/images/homepage/user.png" alt="user" class="user">
+            <img src="<%=request.getContextPath() %>/asset/images/homepage/user.png" alt="user" class="user">
             <div class="signup">
                 <p id="sign">Login</p>
                 <p id="welcome">WELCOME</p>
                 <form action="<%=request.getContextPath() %>/LoginServlet" method="post">
-                    <input type="text" name="name" placeholder="User Name" id="name"title="username is cannot contain space or only minimum 2"  pattern="^[a-zA-Z ]{3,50}$" required>
-                    <input type="email" name="email" placeholder="Enter Your Email" id="email"  pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="please required form" required>
-                    <input type="password" name="password" placeholder="Enter Your Password"  id="password"  pattern="(?=.*)(?=.*[a-z])(?=.*[A-Z]).{8,20}" title="Password is cannot contain space or only minimum 8 maximum 20" required >
-                     <button type="submit">login</button>
+                    <input type="text" name="name" placeholder="User Name" id="name"title="username is cannot contain space or only minimum 2"  pattern="^[a-zA-Z]{2,15}$" required>
+                    <input type="email" name="email" placeholder="Enter Your Email" id="email"  pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$" title="please required form" required>
+                    <input type="password" name="password" placeholder="Enter Your Password"  id="password"  pattern="^.*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$" title="Password is cannot contain space or only minimum 8 maximum 20" required >
+           <button type="submit">login</button>
                 </form>
                 
-                <a href="../order/sign_up.jsp"><p>Create an account?</p></a>
+                <a href="<%=request.getContextPath() %>/pages/order/sign_up.jsp"><p>Create an account?</p></a>
                 
                
                    

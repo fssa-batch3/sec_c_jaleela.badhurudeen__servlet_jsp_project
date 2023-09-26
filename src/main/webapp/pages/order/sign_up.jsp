@@ -8,31 +8,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../asset/css/login.css">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/asset/css/login.css">
+    
+<!-- Notify CSS -->
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/gh/suryaumapathy2812/notify__js/notify.css">
+
+<!-- Notify Js script file -->
+<script
+	src="https://cdn.jsdelivr.net/gh/suryaumapathy2812/notify__js/notify.js">
+	
+</script>
 </head>
 
 <body>
+<%
+	String error = (String) request.getAttribute("error");
+	if (error != null) {
+	%>
+	<script>
+		let error = "<%=error%>";
+		Notify.error(error);
+	</script>
+	<%
+	}
+	%>
     <!--login page-->
     <div class="login">
 
         <div class="glass">
 
             <div class="arrow">
-                <a href="../../index.html"><img src="../../asset/images/homepage/arrow.png"
+                <a href="../../index.html"><img src="<%=request.getContextPath() %>/asset/images/homepage/arrow.png"
                         alt="arrow"></a>
             </div>
-            <img src="../../asset/images/homepage/user.png" alt="user" class="user">
+            <img src="<%=request.getContextPath() %>/asset/images/homepage/user.png" alt="user" class="user">
             <div class="signup">
                 <p id="sign">Sign Up</p>
                 <p id="welcome">WELCOME</p>
                 <p id="h_five">Create an account to continue.</p>
-                <form id="form" action="<%=request.getContextPath() %>/SignUpServlet" method="post">
+                <form id="form" action="<%=request.getContextPath() %>/SignUpServlet" method="post" onsubmit="return validateForm()">
 
                     <input type="text" name="username" placeholder="User name" id="name"
-                        title="username is cannot contain space or only minimum 2" pattern=([A-zÀ-ž\s]){2,} required> 
+                        title="username is cannot contain space or only minimum 2" pattern="^[a-zA-Z]{2,15}$" required> 
                     <input type="email" name="email" placeholder="Enter Your Email" id="email"
-                        pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="please required formet" required>
-                    <input type="password" name="password" placeholder="Enter Your Password" id="password" pattern="(?=.*)(?=.*[a-z])(?=.*[A-Z]).{8,20}" title="Password is cannot contain space or only minimum 8 maximum 20" required>
+                        pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$" title="please required formet" required>
+                    <input type="password" name="password" placeholder="Enter Your Password" id="password" pattern="^.*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$" title="Password is cannot contain space or only minimum 8 maximum 20" required>
+                    <input type="password" name="conformpassword" placeholder="Confirm Your Password" id="ConfirmPwd" pattern="^.*(?=.{8,})(?=..*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$" title="Password is cannot contain space or only minimum 8 maximum 20" required>
                     <a href="../order/login.html">
                         <p>Already have an account?</p>
                     </a>
@@ -42,6 +64,17 @@
             </div>
         </div>
     </div>
+    <script>
+		function validateForm() {
+			var password1 = document.getElementById("password").value;
+			var password2 = document.getElementById("ConfirmPwd").value;
+			if (password1 !== password2) {
+				alert("Passwords do not match. Please check and try again.");
+				return false;
+			}
+			return true;
+		}
+	</script>
     <!--  
     <script>
 

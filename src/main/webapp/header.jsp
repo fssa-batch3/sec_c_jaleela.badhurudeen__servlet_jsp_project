@@ -36,6 +36,8 @@
                 boolean isLoginIn = user != null;
                 if (isLoginIn != false) {
 		%>
+		                <a href="<%=request.getContextPath() %>/ProfileServlet"><p id="login"> Profile </p></a>
+		
 		<%
 		}else{
 		%>
@@ -51,10 +53,9 @@
 		
 		%>
                 <a href="<%=request.getContextPath() %>/pages/admin/doctor_reg.jsp"><i class="fa-solid fa-user-doctor"></i></a>
-                <a href="<%=request.getContextPath() %>/pages/order/order_history.jsp"><i class="fa-solid fa-truck-fast"></i></a>
+                <a href="<%=request.getContextPath() %>/OrderHistoryServlet"><i class="fa-solid fa-truck-fast"></i></a>
                 <a href="<%=request.getContextPath() %>/pages/order/add_to_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                <a href="<%=request.getContextPath() %>/ProfileServlet"><i class="fa-solid fa-circle-user" id="user"></i></a>
-                
+               
                 <p id= "count">0</p>
 </div>
 

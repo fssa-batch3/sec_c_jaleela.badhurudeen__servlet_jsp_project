@@ -10,50 +10,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Specsee</title>
-    <link rel="stylesheet" href="../../asset/css/style.css">
-    <link rel="stylesheet" href="../../asset/css/computer.css">
-    <link rel="stylesheet" href="/asset/css/facilities/nav.css">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/asset/css/style.css">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/asset/css/computer.css">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/asset/css/facilities/nav.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
    <jsp:include page="/header.jsp"></jsp:include>
   <!-- end of header -->
  <div class="banner">
-  <img src="../../asset/images/computer_glasses/Main_Image_Banner-3.png" alt="" id="banner_imgs">
+  <img src="<%=request.getContextPath() %>/asset/images/computer_glasses/Main_Image_Banner-3.png" alt="" id="banner_imgs">
 </div>
-<aside>
-    <ul>
-      <li>
-         <p class="fil_sort"><a href="#">Sort By <i class="fa fa-angle-right"></i></a></p> 
-         <div class="drop_down">
-           <ul>
-             <li>
-               <a aria-label="Categories"href="#"> Popular</a><br>
-               <a aria-label="Categories"href="#">Discount</a><br>
-               <a aria-label="Categories"href="#">Top Rated</a><br>
-               <a aria-label="Categories"href="#">New Arrivals</a><br>
-               <a aria-label="Categories"href="#">Low Price</a><br>
-               <a aria-label="Categories"href="#">High Price</a><br>
-             </li>
-           </ul>
-         </div>
-      </li>
-    </ul>
-      <div class="filter">
-          <p class="fil_sort"><a href="#">Filters<i class="fa fa-angle-right"></i></a></p>
-        <div class="drop_down">
-         <p>
-              <a aria-label="Categories"href="#"> Gender</a><br>
-              <a aria-label="Categories"href="#">Brand</a><br>
-              <a aria-label="Categories"href="#">Frame Type</a><br>
-              <a aria-label="Categories"href="#">Frame Shape</a><br>
-              <a aria-label="Categories"href="#">FrameMaterial</a><br>
-              <a aria-label="Categories"href="#">Frame Size</a><br>
-              <a aria-label="Categories"href="#">Frame Color</a><br>
-         </p>
-        </div>
-      </div>
-</aside>
+
 <main>
   <div class="computer_glasses">
 

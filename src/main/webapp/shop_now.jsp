@@ -11,10 +11,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../asset/css/shop_now.css">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/asset/css/shop_now.css">
 </head>
 
 <body>
+ <jsp:include page="header.jsp"></jsp:include>
     <main>
     <%
 	User user = (User) session.getAttribute("user");
@@ -33,7 +34,7 @@
 		phoneNumber = user.getPhoneNumber();
 	}
 	%>
-        <form id="form" action="ShopNowServlet?productId=<%=productId%>" method="post">
+        <form id="form" action="ShopNowServlet?id=<%=productId%>" method="post">
             <div class="container">
                 <!--shipping address-->
                 <h1>Shipping Address</h1>
@@ -41,17 +42,17 @@
                     <div class="input">
                         <label for="name">Name</label>
                         <input type="text" name="name" id="username" required
-                            title="username is cannot contain space or only minimum 2"  value="<%=userName%>">
+                            title="username is cannot contain space or only minimum 2"  value="<%=userName%>" pattern="^[a-zA-Z]{2,15}$">
                     </div>
                     <div class="input">
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email"
                             pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-                            title="please required formet" required  value="<%=email%>">
+                            title="please required email formet use '@'" required  value="<%=email%>">
                     </div>
                     <div class="input">
                         <label for="address">Address</label>
-                        <input type="text" name="address" id="address" value="<%=address%>" required>
+                        <input type="text" name="address" id="address" value="<%=address%>" required pattern="^[^ .]+( [^ .]+)*$" title="please avoid spaces and dots ,use '/' and ','">
                     </div>
                     <div class="input">
                         <label for="phone">Phone</label>
@@ -69,7 +70,7 @@
                     <div class="payment_img">
                
                         <input type="radio" name="payment" id="cash_on_delivery" class="payment_option"
-                            value="cash_delivery">
+                            value="cash_delivery" required>
                         <label for="cash">Cash On Delivery</label>
 
                     </div>

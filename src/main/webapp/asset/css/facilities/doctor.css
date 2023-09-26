@@ -16,6 +16,7 @@
     height: 100vh;
     background-color: white;
     background-attachment: fixed;
+    overflow:hidden;
   }
   
   .content {

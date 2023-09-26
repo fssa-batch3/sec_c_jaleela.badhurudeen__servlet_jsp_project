@@ -10,12 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.fssa.specsee.daolayer.UserDAO;
+import com.fssa.specsee.exceptions.DAOException;
 import com.fssa.specsee.exceptions.InvalidInputException;
 import com.fssa.specsee.exceptions.ServiceException;
 import com.fssa.specsee.modelobjects.User;
 import com.fssa.specsee.servicelayer.UserService;
-
-
 
 /**
  * Servlet implementation class LoginServlet
@@ -31,37 +31,43 @@ public class LoginServlet extends HttpServlet {
 		super();
 	}
 
-
-	
-	
-	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-		
-		UserService userService = new UserService();
-		User user  = new User(); 
-		try {
-			user =  userService.login(email);
-			String pwd = user.getPassword(); 
-			if(!password.equals(pwd)) {
-				throw new InvalidInputException("Incorrect Password");
-			}
-			response.sendRedirect(request.getContextPath() + "/index.jsp");
-			
-//			Below the code for create the new session
-			HttpSession httpSession = request.getSession();
-			httpSession.setAttribute("loggedInEmail", email);
-			 user = userService.getUserByEmail(email);
-			 httpSession.setAttribute("user", user);
-				
-		} catch (ServiceException | InvalidInputException e) {
-			String errorMessage = e.getMessage();
-			request.setAttribute("errorMessage", errorMessage);
-			request.getRequestDispatcher("login.jsp").forward(request, response);
-		}
-	}
 
+		UserService userService = new UserService();
+		User user = new User();
+		if ("admin@gmail.com".equals(email) && "Admin@123".equals(password)) {
+			HttpSession session = request.getSession();
+			session.setAttribute("loggedInEmail", email);
+
+			response.sendRedirect("./indexAdmin.jsp");
+		}
+
+		else {
+			try {
+				user = userService.login(email);
+				String pwd = user.getPassword();
+				password = UserDAO.hashPassword(password);
+				if (!password.equals(pwd)) {
+					throw new InvalidInputException("Incorrect Password");
+				}
+				response.sendRedirect(request.getContextPath() + "/index.jsp");
+
+//				Below the code for create the new session
+				HttpSession httpSession = request.getSession();
+				httpSession.setAttribute("loggedInEmail", email);
+				user = userService.getUserByEmail(email);
+				httpSession.setAttribute("user", user);
+
+			} catch (ServiceException | InvalidInputException | DAOException e) {
+				String errorMessage = e.getMessage();
+				request.setAttribute("errorMessage", errorMessage);
+				request.getRequestDispatcher("pages/order/login.jsp").forward(request, response);
+			}
+		}
+
+	}
 }

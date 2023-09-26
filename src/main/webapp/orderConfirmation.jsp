@@ -15,7 +15,7 @@
         <a href="../../pages/order/shop_now.html"></a>
         <h1>Successfully !</h1>
         <h4>Your Order Placed</h4>
-       <a href="../order/order_history.html"> <button style="background-color: rgb(0, 145, 255); color: white; width: 300px; height: 50px; border-radius: 10px; font-size: 20px; ">See Your Order History</button></a>
+       <a href="<%=request.getContextPath() %>/OrderHistoryServlet"> <button style="background-color: rgb(0, 145, 255); color: white; width: 300px; height: 50px; border-radius: 10px; font-size: 20px; ">See Your Order History</button></a>
     </div>
 </body>
 </html>

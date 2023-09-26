@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,20 +9,20 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../asset/css/style.css">
     <link rel="stylesheet" href="/asset/css/facilities/nav.css">
-    <link rel="stylesheet" href="../../asset/css/facilities/your_vision.css">
+    <link rel="stylesheet" href="../../asset/css/facilities/frame_size.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
-    <jsp:include page="header.jsp"></jsp:include>
-    <main>
-        <p id="result"> Your Result</p>
-        <img src="../../asset/images/home_eye_test/eyetest_fail.png" alt="">
-        <p>Mayebe you have eye power Please consider your doctor</p>
-        <div class="btn">
-            <a href="../facilities/home_eye_test.html"><button type="submit">Retry</button></a> 
-           <a href="../product/computer.html"><button type="submit">Buy Eyeglasses</button></a> 
+   <jsp:include page="/header.jsp"></jsp:include>
+   <main>
+        <div class="frame_head">
+            <a href="../../pages/facilities/frame_size.jsp"><img src="../../asset/images/styles/face_type.png" alt=""></a>
+            <a href="../../pages/facilities/priscription.jsp"><img src="../../asset/images/styles/priscription.png" alt=""></a>
+            <a href="../../pages/facilities/frame_size_credit.jsp"><img src="../../asset/images/styles/credit.png" alt=""></a>
         </div>
+      <img src="../../asset/images/styles/face_size.png" alt="" style="background-color: white; margin-left: 15%;
+      margin-top: 150px;">
     </main>
      <!--footer start-->
      <footer>

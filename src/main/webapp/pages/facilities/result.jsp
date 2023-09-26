@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,14 +14,14 @@
 
 </head>
 <body>
-    <jsp:include page="header.jsp"></jsp:include>
+    <jsp:include page="/header.jsp"></jsp:include>
     <main>
         <img src="../../asset/images/home_eye_test/near-vision-yay.svg" alt="">
         <h2>You have no signs in this test to problem of eye.</h2>
         <p>Keep your vision in check by taking this test & visiting your eye doctor regularly.</p>
         <div class="btn">
-            <a href="../facilities/home_eye_test.html"><button type="submit">Retry</button></a> 
-            <a href="../product/computer.html"><button type="submit">Buy Eyeglasses</button></a> 
+            <a href="../facilities/home_eye_test.jsp"><button type="submit">Retry</button></a> 
+            <a href="../product/computer.jsp"><button type="submit">Buy Eyeglasses</button></a> 
          </div>
     </main>
     <!--footer start-->

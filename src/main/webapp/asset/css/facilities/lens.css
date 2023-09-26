@@ -9,6 +9,7 @@ width: 800px;
 height: 600px;
 border-radius: 30px;
 margin-left: 25%;
+overflow:hidden;
 
 }
 i{

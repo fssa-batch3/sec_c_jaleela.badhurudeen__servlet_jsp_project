@@ -31,30 +31,30 @@
 
 				<label for="name">Product Name:</label>
 				<input type="text" id="name"
-				name="name" required><br> <br>
+				name="name" required pattern="^[a-zA-Z]{5,15}$"><br> <br>
 				<label for="image">ProductMainImageURL:</label>
-			<input type="text" id="image" name="image" required><br>
+			<input type="text" id="image" name="image" required pattern="(http)?s?:?(\\/\\/[^\"']*\\.(?:png|jpg|jpeg|gif|svg|webp))"><br>
 			<label for="price">Product price:</label> 
 			<input type="number"
 				id="price" name="price" required><br> 
 				
 			<label for="description">Product Description:</label> 
 			<input
-				type="text" id="description" name="description" required><br>
+				type="text" id="description" name="description" required ><br>
 			<label for="image1">ProductSideImageURL1:</label> 
 			<input type="text"
-				id="image1" name="image1" required><br> 
+				id="image1" name="image1" required pattern="(http)?s?:?(\\/\\/[^\"']*\\.(?:png|jpg|jpeg|gif|svg|webp))"><br> 
 				<label
 				for="image2">ProductSideImageURL2:</label> 
 				<input type="text"
-				id="image2" name="image2" required><br> 
+				id="image2" name="image2" required pattern="(http)?s?:?(\\/\\/[^\"']*\\.(?:png|jpg|jpeg|gif|svg|webp))"><br> 
 				<label
 				for="image3">ProductSideImageURL3:</label> 
 				<input type="text"
-				id="image3" name="image3" required><br>
+				id="image3" name="image3" required pattern="(http)?s?:?(\\/\\/[^\"']*\\.(?:png|jpg|jpeg|gif|svg|webp))"><br>
 				<label
 				for="image4">ProductSideImageURL4:</label> <input type="text"
-				id="image4" name="image4" required><br>
+				id="image4" name="image4" required pattern="(http)?s?:?(\\/\\/[^\"']*\\.(?:png|jpg|jpeg|gif|svg|webp))"><br>
 <label
 				for="category">Product Category: </label> 
 				<select name="category"

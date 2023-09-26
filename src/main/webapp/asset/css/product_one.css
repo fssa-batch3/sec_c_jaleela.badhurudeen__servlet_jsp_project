@@ -1,4 +1,6 @@
-
+body{
+	overflow: hidden;
+}
 .large_img_div img{
     width: 500px;
     margin-top: 50px;

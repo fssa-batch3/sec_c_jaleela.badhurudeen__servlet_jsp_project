@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,36 +9,40 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../asset/css/style.css">
     <link rel="stylesheet" href="/asset/css/facilities/nav.css">
-    <link rel="stylesheet" href="../../asset/css/facilities/amd.css">
-    <link rel="stylesheet" href="../../asset/css/facilities/home_eye_test.css">
+    <link rel="stylesheet" href="../../asset/css/facilities/eye_screening.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
-    <jsp:include page="header.jsp"></jsp:include>
-    <!-- end of header -->
-    
-    <main>
-        <div class="amd">
-            <div class="near_vision">            
-                <img src="../../asset/images/home_eye_test/bnr-vision.svg" alt="amd" >
+    <jsp:include page="/header.jsp"></jsp:include>
+       <div class="eye_screening">
+            <p class="h_one">Eye Screening</p>
+            <p class="h_three">Instructions</p>
+            <div class="steps"> 
+                <img src="../../asset/images/home_eye_test/glass.png.png" alt="">
+                <p>In case you are using eyeglasses or contact lenses,<br> please take the test wearing your eyeglasses or contact lenses.
+                </p>
             </div>
-            <p id="amd">TEST YOUR NEAR VISION</p>
-            <p>In nearsightedness (myopia), the point of focus is in front of the retina, making distant<br> objects appear blurry. Nearsightedness (myopia) is a common vision<br> condition in which near objects appear clear, but objects farther<br> away look blurry.</p>
+            <div class="steps">
+                <img src="../../asset/images/home_eye_test/comb.svg" alt="">
+                <p>Maintain a distance of 3 feet from the monitor. <br>If this distance is not maintained, we cannot derive the correct result.</p>
+            </div>
+            <div class="steps">
+                <img src="../../asset/images/home_eye_test/monitor.png.png" alt="" id="monitor">
+                <p style="margin-right: 150px;">The monitor should be parallel to your face.</p>
+            </div>
+            <div class="steps">
+                <img src="../../asset/images/home_eye_test/chair.png" alt="">
+                <p>Use an adjustable chair and maintain your eye level<br> at the same height as the monitor so that the letters are clearly visible.</p>
+            </div>
+            <div class="steps">
+                <img src="../../asset/images/home_eye_test/arrow.png.png" alt="">
+                <p>This test is best viewed on Screen Resolution of 1024 X 768.</p>
+            </div>
+            <a href="./eye_Screening_test.jsp"><button type="submit">Next</button></a>
         </div>
-        <div class="steps">
-            <p class="h_three">Steps To Follow Before The Test</p>
-            <p>1. Keep at least 15 inches of distance between yourself & the screen.</p>
-            <img src="../../asset/images/home_eye_test/astigmatism-steps1.svg" alt="">
-            <p>2. If you already have Bifocal / Progressive / Reading Glasses, put them on before you take the test.</p>
-            <img src="../../asset/images/home_eye_test/vision-step2.svg" alt="">
-            <p>3. Make sure to see through the bottom part of the lens if you have Bifocal/Progressive Eyeglasses. </p>
-            <img src="../../asset/images/home_eye_test/vision-step3.svg" alt="">
-        </div>
-        <a href="../test/near_vision_test.html"><button type="submit">Let's Start</button></a>
-    </main>
-    <!--footer start-->
-    <footer>
+     <!--footer start-->
+     <footer>
         <div class="footlogo">
             <img src="../../asset/images/homepage/specsee1.png" alt="specsee">
         </div>

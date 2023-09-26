@@ -12,8 +12,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../../asset/css/style.css">
-    <link rel="stylesheet" href="../../asset/css/profile.css">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/asset/css/style.css">
+    <link rel="stylesheet" href="<%=request.getContextPath() %>/asset/css/profile.css">
+    <!-- Notify CSS -->
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/gh/suryaumapathy2812/notify__js/notify.css">
+
+<!-- Notify Js script file -->
+<script
+	src="https://cdn.jsdelivr.net/gh/suryaumapathy2812/notify__js/notify.js">
+	
+</script>
     
 
 
@@ -21,11 +30,34 @@
 
 <body>
 
+<%
+	String success = (String) request.getAttribute("success");
+	if (success != null) {
+	%>
+	<script>
+		let success = "<%=success%>";
+		Notify.success(success);
+	</script>
+	<%
+	}
+	%>
+	
+	<%
+	String error = (String) request.getAttribute("error");
+	if (error != null) {
+	%>
+	<script>
+		let error = "<%=error%>";
+		Notify.error(error);
+	</script>
+	<%
+	}
+	%>
     <!-- <img src="../../asset/images/homepage/wave-haikei.png"> -->
     <div class="profile_side">
 
         <h2>Upload Your Profile</h2><br>
-        <img src="../../asset/images/homepage/girl3.jpg" alt="" id=""><br>
+        <img src="<%=request.getContextPath() %>/asset/images/homepage/girl3.jpg" alt="" id=""><br>
         <input type="file" name="file" id="file">
 <!--  
         <div class="btn_prfl">
@@ -40,8 +72,7 @@
         <h1>profile</h1>
         <div class="profile_img">
 
-            <img src="../../asset/images/homepage/profile.png" alt="profile_img">
-            <!-- <a href="../order/profile_edit.html"> <button type="button" onclick="edit()">Edit Profile</button> </a> -->
+            <img src="<%=request.getContextPath() %>/asset/images/homepage/profile.png" alt="profile_img">
         </div>
         <%
         User userDetails = (User) request.getSession().getAttribute("userDetails");
@@ -80,11 +111,11 @@
                 <input type="radio" name="gender" id="trans" value="transgender">
                 <label>Transgender</label>
             </div> -->
-<div class="btn_prfl">
-            <a href="<%=request.getContextPath() %>/profileEdit.jsp"> <div>Edit</div> </a>
+
+            <a href="<%=request.getContextPath() %>/profileEdit.jsp"> <div class="btn" id="edit">Edit</div> </a>
           <a href="<%=request.getContextPath() %>/LogoutServlet"><button type="button" id="logout">Logout</button></a> 
-            <a href="<%=request.getContextPath() %>/index.jsp"><div >Back to Home</div></a>
-        </div>
+            <a href="<%=request.getContextPath() %>/index.jsp"><div  class="btn">Back to Home</div></a>
+     
 
         </form>
         

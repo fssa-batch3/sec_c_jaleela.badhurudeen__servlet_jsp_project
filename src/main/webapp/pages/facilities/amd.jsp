@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +17,7 @@
 <body>
   <main>
    
- <jsp:include page="header.jsp"></jsp:include>
+ <jsp:include page="/header.jsp"></jsp:include>
         <div class="amd">
             <img src="../../asset/images/home_eye_test/banner-amd.png" alt="amd">
             <p id="amd">AMD</p>
@@ -31,7 +33,7 @@
             </p>
             <img src="../../asset/images/home_eye_test/astigmatism-steps3.svg" alt="">
         </div>
-       <a href="../test/amd_test.html" ><button type="submit">Let's Start</button></a>
+       <a href="../test/amd_test.jsp" ><button type="submit">Let's Start</button></a>
     </main>
     <!--footer start-->
     <footer>

@@ -99,8 +99,8 @@ product_List.filter(function (k) {
     product_price.setAttribute("class", "product-price");
     product_price.innerText = k["rupees"] + "/-";
     product_link.append(product_price);
-  };
-})
+  });
+});
 
 // productList(k);
 

@@ -11,7 +11,7 @@
 
 </head>
 <body>
-
+<jsp:include page="header.jsp"></jsp:include>
 <main>
         <div class="container">
     <% Product product = (Product) request.getAttribute("product"); %>

@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +15,7 @@
 
 </head>
 <body>
-   <jsp:include page="header.jsp"></jsp:include>
+   <jsp:include page="/header.jsp"></jsp:include>
     <!-- end of header -->
     <main>
         <div class="amd">
@@ -76,7 +78,7 @@
         </div>
     </footer>
     <!--footer end-->
-    <script>
+    <script type="text/javascript">
         const amd_test = document.querySelectorAll(".amd_tester")
         console.log(amd_test);
         
@@ -92,18 +94,18 @@
                     }    
             }
             // console.log(tester);
-            if(amd_tester[0] === "Yes" && amd_tester[1] === "Yes"){
-                window.location.href = "../../../pages/facilities/result_red.html"
+            if(amd_tester[0] == "Yes" && amd_tester[1] == "Yes"){
+                window.location.href = "../../pages/facilities/result_red.jsp"
             } 
-            else if(amd_tester[0] === "No" && amd_tester[1] === "No"){
-                window.location.href = "../../../pages/facilities/result.html"
+      		else if(amd_tester[0] == "No" && amd_tester[1] == "No"){
+                window.location.href = "../../pages/facilities/result.jsp"
             } 
-            else  if (amd_tester[0] === "Yes" || amd_tester[1] === "Yes") {
-                window.location.href = "../../../pages/facilities/result_yellow.html"
+            else if (amd_tester[0] == "Yes" || amd_tester[1] == "Yes") {
+                window.location.href = "../../pages/facilities/result_yellow.jsp"
             }
           
             
-            else if(amd_tester[0] === undefined && amd_tester[1] === undefined) {
+            else if(amd_tester[0] == undefined && amd_tester[1] == undefined) {
                 console.log(alert("please select anyone "))
             }
             

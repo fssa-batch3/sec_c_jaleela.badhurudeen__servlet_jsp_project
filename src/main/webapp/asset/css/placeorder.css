@@ -1,4 +1,7 @@
 /* order start */
+body{
+	overflow: hidden;
+}
 .order_placed{
     display: flex;
     flex-direction: column;

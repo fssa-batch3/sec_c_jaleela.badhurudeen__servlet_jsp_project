@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +19,7 @@
 </head>
 
 <body>
-    <jsp:include page="header.jsp"></jsp:include>
+    <jsp:include page="/header.jsp"></jsp:include>
     <main>
         <div class="amd">
             <div class="banner"><img src="../../asset/images/home_eye_test/banner-astigmatism.svg" alt="amd"></div>
@@ -100,13 +102,13 @@
             }
             // console.log(tester);
             if (amd_tester[0] === "Yes" && amd_tester[1] === "Yes") {
-                window.location.href = "../../../pages/facilities/result_red.html"
+                window.location.href = "../../pages/facilities/result_red.jsp"
             }
             else if (amd_tester[0] === "No" && amd_tester[1] === "No") {
-                window.location.href = "../../../pages/facilities/result.html"
+                window.location.href = "../../pages/facilities/result.jsp"
             }
             else if (amd_tester[0] === "Yes" || amd_tester[1] === "Yes") {
-                window.location.href = "../../../pages/facilities/result_yellow.html"
+                window.location.href = "../../pages/facilities/result_yellow.jsp"
             }
 
 

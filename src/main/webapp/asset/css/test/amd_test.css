@@ -1,3 +1,6 @@
+body{
+	overflow: hidden;
+}
 form{
     position: absolute;
     top: 950px;

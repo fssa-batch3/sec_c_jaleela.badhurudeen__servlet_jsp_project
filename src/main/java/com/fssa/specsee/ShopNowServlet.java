@@ -53,7 +53,7 @@ public class ShopNowServlet extends HttpServlet {
 		String address= request.getParameter("address");
 		String phoneNumber= request.getParameter("phone");
 		HttpSession session = request.getSession();
-		User user = (User) session.getAttribute("loggedInEmail");
+		User user = (User) session.getAttribute("user");
 		Order order = new Order();
 		OrderProduct orderProduct = new OrderProduct();
 		try {
@@ -75,13 +75,12 @@ public class ShopNowServlet extends HttpServlet {
 			Logger.info(order);
 			orderService.addOrder(order);
 			Logger.info("Order Placed Sucessfully ");
-			RequestDispatcher rd = request.getRequestDispatcher("orderConfirmation.jsp");
-			rd.forward(request, response);
+			
 		} catch (DAOException | SQLException | CustomException e) {
 			Logger.info("Order Failed"+e.getMessage());
 			e.printStackTrace();
 		}
-		RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("./orderConfirmation.jsp");
 		rd.forward(request, response);
 
 	}

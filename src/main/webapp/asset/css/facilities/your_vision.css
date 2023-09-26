@@ -26,3 +26,6 @@ p{
 footer{
     margin-top: 150px;
 }
+body{
+overflow: hidden;	
+	}

@@ -31,30 +31,42 @@ public class UpdateProfileServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-    	System.out.println("dtyr");
-		String name = request.getParameter("name");
-		String email = request.getParameter("email");
-		String phoneNumber = request.getParameter("phonenumber");
-		String address = request.getParameter("address");
-		System.out.println(phoneNumber+"dtyr");
-		UserService service = new UserService();
-		User user = new User();
-		user.setUserName(name);
-		user.setPhoneNumber(phoneNumber);
-		user.setEmailId(email);
-		user.setUserAddress(address);
+    	
+		String name = request.getParameter("nameProfile");
+		String email = request.getParameter("emailProfile");
+		String phoneNumber = request.getParameter("phonenumberProfile");
+		String address = request.getParameter("addressProfile");
 		
-		Logger.info(user.toString());
+		
 
 		try {
+			
+			UserService service = new UserService();
+			
+			User user = new User();
+			user.setUserName(name);
+			user.setPhoneNumber(phoneNumber);
+			user.setEmailId(email);
+			user.setUserAddress(address);
+			
+			
+			System.out.println(user.getEmailId()+"iiii");
+			Logger.info(user.toString());
 			service.updateUserProfile(user);
+			
+			System.out.print(user.getEmailId());
 			request.setAttribute("userDetails", user);
-			RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
-			rd.forward(request, response);
+			request.setAttribute("success", "Successfully Updated your profile");
+			RequestDispatcher dis = request.getServletContext().getRequestDispatcher("/index.jsp");
+			dis.forward(request, response);
+			
 //			response.sendRedirect(request.getContextPath() + "/profilepage.jsp");
 
 		} catch (ServiceException e) {
 			e.printStackTrace();
+			request.setAttribute("error", e.getMessage());
+			RequestDispatcher dis = request.getServletContext().getRequestDispatcher("/profileEdit.jsp");
+			dis.forward(request, response);
 		}
 	}
 }

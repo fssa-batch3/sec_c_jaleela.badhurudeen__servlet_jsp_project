@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -57,11 +58,19 @@ public class AddProductServlet extends HttpServlet {
 
 		try {
 			ProductService.addProduct(product);
-			response.sendRedirect(request.getContextPath() + "/ProductServlet");
+			request.setAttribute("success", "Successfully Added The Product");
+			RequestDispatcher dis = request.getServletContext().getRequestDispatcher("/ProductServlet");
+			dis.forward(request, response);
+			
+//			response.sendRedirect(request.getContextPath() + "/ProductServlet");
 		}
 
 		catch (InvalidProductException e) {
 			e.printStackTrace();
+			
+			request.setAttribute("error", e.getMessage());
+			RequestDispatcher dis = request.getServletContext().getRequestDispatcher("/ProductServlet");
+			dis.forward(request, response);
 
 		}
 	}

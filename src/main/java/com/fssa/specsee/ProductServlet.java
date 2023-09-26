@@ -48,16 +48,21 @@ public class ProductServlet extends HttpServlet {
 		try {
 			List<Product> productList;
 
-			if (categoryName != null && !categoryName.isEmpty()) {
-				productList = (List<Product>) ProductService
-						.findAllProductByCategory(ProductCategory.valueOf(categoryName));
-				System.out.print(productList);
-			} else {
+			
 				productList = (List<Product>) ProductService.getAllProducts();
-			}
+			
 			request.setAttribute("Productlist", productList);
-		} catch (DAOException | SQLException | InvalidProductException | ServiceException e) {
+		} catch (DAOException | SQLException | InvalidProductException e) {
 			e.printStackTrace();
+		}
+		
+		String success = (String) request.getAttribute("success");
+		String error = (String) request.getAttribute("error");
+		if(success != null) {
+			request.setAttribute("success", success);
+		}
+		if(error != null) {
+			request.setAttribute("error", error);
 		}
 
 		RequestDispatcher rd = request.getRequestDispatcher("/product.jsp");

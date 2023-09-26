@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +13,7 @@
 </head>
 <body>
   
-  <a href="../product/catagories.html">
+  <a href="../product/catagories.jsp">
      <i class="fa-solid fa-x"></i> 
     </a> 
         <h1>Select your lens type</h1>

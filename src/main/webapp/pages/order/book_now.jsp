@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +20,7 @@
 
 <body>
    
-   <jsp:include page="header.jsp"></jsp:include>
+   <jsp:include page="/header.jsp"></jsp:include>
     <main>
         <h1>ENTER YOUR DETAILS</h1>
         <form id="form">

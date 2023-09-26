@@ -91,12 +91,17 @@ public class UpdateProductServlet extends HttpServlet {
 
 		try {
 			ProductService.updateProduct(product,id);
-			response.sendRedirect(request.getContextPath() + "/ProductServlet");
+			request.setAttribute("success", "Successfully updated the Product");
+			RequestDispatcher dis = request.getServletContext().getRequestDispatcher("/ProductServlet");
+			dis.forward(request, response);
 		}
 
 		catch (InvalidProductException | DAOException e) {
 			System.out.println(e.getMessage());
-			e.printStackTrace();
+			request.setAttribute("error", e.getMessage());
+			RequestDispatcher dis = request.getServletContext().getRequestDispatcher("/ProductServlet");
+			dis.forward(request, response);
+
 
 		}
 		
