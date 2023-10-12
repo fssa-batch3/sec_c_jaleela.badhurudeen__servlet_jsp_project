@@ -1,0 +1,455 @@
+/* new edit */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+#login{
+    position: relative;
+    top: 42px;
+    right: 80px;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    
+}
+i{
+    position: relative;
+    top: -35px;
+
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+/* start of header */
+/* start of navbar one */
+
+.nav-one .logo-img a img {
+    width: 150px;
+}
+
+.nav-one {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+/* .nav-one .nav-search {
+    /* position: relative; */
+    /* margin: 0 auto; 
+} */
+
+.nav-one .nav-search input {
+    height: 40px;
+    width: 500px;
+    border-radius: 10px;
+    padding-left: 10px;
+    border: 3px solid #075ead;
+    outline: none;
+}
+.nav-one .nav-search i {
+    position: relative;
+    top: -35px;
+    right: 35px;
+
+}
+.nav-one .nav-right-menu{
+    width: 250px;
+    height: 100px;
+}
+.nav-one .nav-right-menu a {
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.nav-one .nav-right-menu a i {
+    font-size: 25px;
+    color: black;
+    height: 35px;
+    width: 30px;
+}
+
+/* end of navbar one */
+
+
+/* start of navbar two */
+.nav-two  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #075ead;
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    z-index: 1;
+    top: 100px;
+    left: 0;
+}
+
+.nav-two ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+.nav-two ul li a {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav-two ul li a:hover {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    font-size: 22px;
+    padding: 5px;
+}
+/* end of navbar two */
+
+/* end of header */
+
+
+/* start of main content */
+
+/* start of cont with text and image */
+
+.text-image {
+    background-image: url("../images/homepage/twogirl.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 700px; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.text-image p {
+    font-size: 50px;
+    width: 350px;
+    margin-left: 40px;
+    font-weight: 800;
+    line-height: 80px;
+    letter-spacing: 5px;
+    color: black;
+}
+/* end of cont with text and image */
+
+/* start of home scroll content */
+
+.home-scroll {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.home-scroll .scroll-line {
+    width: 35%;
+    height: 2px;
+    background-color: black;
+    margin: 40px;
+    
+}
+
+.home-scroll .scroll-title {
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    font-weight: 800;
+
+}
+
+/* end of home scroll content */
+
+/* end of main content */
+/* end new edit */
+
+#slider{
+    overflow: hidden;
+    margin-top: 100px;
+    height: 350px;
+    width: 80%;
+    margin-left: 150px;
+} 
+#slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+#slider figure img{
+    float: left;
+    width: 20%;
+    height: 500px;
+    object-fit: cover;
+}
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%;
+    }
+}
+/* slider end */
+/* collection start */
+.collection img{
+    height: 350px;
+    width: 250px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px gray;
+    filter: grayscale(.5);
+    transition: .4s;
+}
+[class*='s']{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.collection p{
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.collection img:hover{
+    filter: grayscale(0);
+    transform: rotate(10deg) scale(1.3);
+}
+/* collection end */
+/* footer start */
+footer{
+    background-color: rgb(223, 223, 242);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 400px;
+    width: 100%;
+   
+}
+.footlogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footlogo img{
+    width: 150px;
+}
+.icon img{
+    width: 50px;
+    padding: 10px;
+}
+.foot{
+    display: flex;
+    justify-content: space-around;
+}
+.copy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thanks{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+}
+#contact{
+font-weight: bold;
+font-size: 20px;
+}
+#thank{
+font-weight: bold;
+font-size: 20px;
+}
+/* footer end */
+/* media queries start */
+
+@media screen and (max-width:600px) {
+   .nav-one .logo-img a img{
+    width: 100px;
+   }
+   .nav-one .nav-search input{
+    width: 145px;
+    height: 30px;
+   }
+   .nav-one .nav-search i{
+    font-size: 10px;
+    margin-left: 17px;
+   }
+.nav-one{
+    position: sticky;
+    z-index: 1;
+}
+    .nav-one .nav-right-menu a i{
+        font-size: 20px;
+        position: relative;
+        top: -10px;
+    }
+    .nav-one .nav-right-menu a {
+        padding: 5px;
+    }
+    .nav-two{
+        height: 50px;
+        position: sticky;
+        z-index: 1;
+    }
+    .nav-two ul li a{
+        font-size: 10px;
+    }
+    .nav-two ul{
+        width: 80%;
+    }
+    .nav-two ul li a:hover {
+        background-color: white;
+        color: black;
+        border-radius: 10px;
+        font-size: 12px;
+    }
+    .text-image {
+        background-image: url("../images/homepage/twogirl.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 400px; 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .text-image p {
+        font-size: 30px;
+        width: 200px;
+        margin-left: 20px;
+        font-weight: 800;
+        line-height: 50px;
+        letter-spacing: 1px;
+        color: black;
+    }
+    .home-scroll{
+        margin-top: 40px;
+    }
+    .home-scroll .scroll-title {
+        font-size: 15px;
+        font-weight: bold;
+         margin-top: 30px;
+    }
+    #slider{
+        overflow: hidden;
+        height: 250px;
+        width: 95%;
+        margin: 0 auto;
+        
+    } 
+    #slider figure{
+        position: relative;
+        width: 500%;
+        margin: 0;
+        left: 0;
+        animation: 20s slider infinite;
+    }
+    #slider figure img{
+        float: left;
+        width: 20%;
+        height: 500px;
+        object-fit: cover;
+    }
+    .collection p{
+        font-size: 20px;
+    }
+   .collection img{
+    height: 180px;
+    width: 80px;
+    box-shadow: 5px 5px 5px gray;
+   }
+   .icon img{
+    width: 30px;
+    padding: 5px;
+}
+footer .foot{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+footer p{
+    font-size: 10px;
+}
+footer .foot #contact {
+    margin-top: 20px;
+}
+}
+
+
+/* media queries end */
+
+
+/* table  */
+
+table{
+    width: 80%;
+    margin: 4em auto;
+
+}
+
+table tr td img {
+    width: 100px;
+}
+#count{
+    height: 26px;
+    width:26px ;
+    font-size: 20px;
+    padding: 4px;
+    margin-left: 155px;
+    margin-top: -100px;
+    border-radius: 50%;
+    color: white;
+    background-color: #075ead;
+    border: 1px solid #075ead;
+}

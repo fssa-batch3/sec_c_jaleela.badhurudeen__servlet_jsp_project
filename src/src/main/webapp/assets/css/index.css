@@ -1,0 +1,82 @@
+@charset "ISO-8859-1";
+/* Reset some default browser styles */
+body, h1, h2, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    
+    color: #333;
+    height: 100%;
+}
+
+header {
+    background-color: rgba(49, 125, 135, 0.8);
+    color: #fff;
+    padding: 10px 0;
+}
+
+header h1 {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+	height: 700px;
+    margin: 20px;
+    background-image: url('https://www.homestratosphere.com/wp-content/uploads/2020/08/Photo-collage-of-different-glass-organizer-01062023.jpg.webp'); /* Replace 'your-image.jpg' with the path to your image */
+    background-size: 100% 100%; /* Adjust to your needs */
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px; /* Add padding to ensure content is visible on top of the background image */
+}
+
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(49, 125, 135, 0.8);
+    color: #fff;
+}
+
+/* Style links on hover */
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Additional styling for specific sections */
+#user-management {
+    background-color: #f9f9f9;
+}
+
+#content-management {
+    background-color: #f9f9f9;
+}
+
+#site-settings {
+    background-color: #f9f9f9;
+}
